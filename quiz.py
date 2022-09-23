@@ -58,15 +58,16 @@ if __name__ =="__main__":
         }
     }
     
-score = 0
+    score = 0
 
-for key, value in quiz.items():
-    print(value["question"])
-    answer = input("Your answer: ")
-    if answer.lower() == value["answer"].lower():
-        print("Correct!\n")
-        score += 1
-    else:
-        print(f"Wrong! The real answer is {value['answer']}\n")
+    for key, value in quiz.items():
+        print(value["question"])
+        answer = input("Your answer: ")
+        if answer.lower() == value["answer"].lower():
+            print("Correct!\n")
+            score += 1
+        else:
+            print(f"Wrong! The real answer is {value['answer']}\n")
 
-print(f"Your score is {score}/{len(quiz)}")
+    print(f"Your score is {score}/{len(quiz)}")
+    print(f"Your percentage is {score//len(quiz)*100}%")
