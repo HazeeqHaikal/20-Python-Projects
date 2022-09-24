@@ -6,10 +6,10 @@ dictionary=PyDictionary()
 def translate():
     
     word = input("Enter your word: ")
-    t = PrettyTable([word, 'Meaning'])
     
     try:
         word = word.capitalize()
+        t = PrettyTable([word, 'Meaning'])
         meaning = dictionary.meaning(word)
         count = 1
     
