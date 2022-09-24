@@ -1,10 +1,9 @@
 import string
 import random
 
-if __name__ == '__main__':
-    
-    character = list(string.ascii_letters + string.digits + string.punctuation)
-       
+character = list(string.ascii_letters + string.digits + string.punctuation)
+
+def passwordGenerator():
     length = int(input("Enter the length of the password: "))
     random.shuffle(character)
     password = []
@@ -15,3 +14,6 @@ if __name__ == '__main__':
     random.shuffle(password)
     password = ''.join(password)
     print(password)
+    
+if __name__ == '__main__':
+    passwordGenerator()
