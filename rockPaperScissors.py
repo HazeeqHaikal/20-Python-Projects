@@ -11,6 +11,7 @@ def rps():
         if user == "r" or user == "p" or user == "s":
             user = user.replace("r", "rock").replace("p", "paper").replace("s", "scissors")
         if user == 'q':
+            print("Thanks for playing!")
             sys.exit()
         elif user == 'rock' or user == 'paper' or user == 'scissors':
             computer = random.choice(options)
